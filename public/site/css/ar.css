@@ -1,0 +1,176 @@
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.menu {
+    left: 52px;
+}
+.menu:hover {
+    cursor: pointer;
+}
+.hambergerIcon {
+    left: 50%;
+}
+.hambergerIcon::before {
+    left: 0px;
+}
+.hambergerIcon::after {
+    right: 0px;
+}
+
+.bg-div-mune {
+    right: 0;
+}
+.element ul {
+    margin-right: 6px;
+}
+
+.element ul li a::after {
+    right: 0;
+}
+.slider-header {
+    right: 0;
+
+}
+.slider-header::after {
+    right: 0;
+}
+.subheader {
+    right: 0;
+}
+.subheader::after {
+    right: 0;
+}
+.text-slider-header h1 {
+    text-align: right;
+}
+.owl-theme .owl-dots .owl-dot span {
+    margin-right: -2px;
+}
+.owl-dots {
+    left: 0;
+    right: 0;
+}
+.slider-header {
+    right: 0;
+}
+.slider-header::after {
+    right: 0;
+}
+.sub-header {
+    right: 0;
+}
+.sub-header::after {
+    right: 0;
+}
+.text-services {
+    padding: 30px 15px 20px;
+}
+.author {
+    left: 10%;
+}
+.subscribe::after {
+    right: 0;
+}
+.form-row .col-auto img {
+    right: 19px;
+}
+.sub-news {
+    margin: 20px 7px;
+}
+.owl-nav {
+    left: 0;
+}
+.chairman-message::after {
+    right: 0;
+}
+.sub-message::after {
+    right: 0;
+}
+.newsletter {
+    background-position: right;
+}
+.search-news,
+.element-news,
+.last-news,
+.project-information {
+    padding: 40px 30px;
+}
+.search-news input {
+    padding-left: 55px;
+}
+.form-control {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.search-news button {
+    left: 0;
+}
+.search-news button {
+    left: -18px;
+}
+.form-input i {
+    right: 0px;
+    padding-right: 24px;
+}
+.form-input input {
+    padding-right: 40px;
+    padding-left: 20px;
+}
+.form-input textarea {
+    padding-right: 40px;
+    padding-left: 20px;
+}
+.input {
+    padding: 40px 30px;
+}
+.sub-contacts::after {
+    right: 16%;
+}
+.footer::after {
+    right: 0;
+}
+.element-footer h2::after,
+.contect-footer h2::after {
+    right: 0;
+}
+.element-footer h2::before,
+.contect-footer h2::before {
+    right: 44px;
+}
+.element-footer ul li a::after {
+    right: 0;
+}
+@media (max-width: 1200px) {
+    .subheader {
+        right: 0;
+    }
+}
+@media (max-width: 992px) {
+    .icon-menu {
+        left: 3%;
+    }
+    .element {
+        right: 0;
+    }
+    .element {
+        right: 0;
+    }
+    .icon-menu {
+        left: 3%;
+    }
+}
+@media (max-width: 576px) {
+    .sub-message::after {
+        right: 0;
+    }
+    .sub-contacts {
+        left: 10%;
+    }
+}

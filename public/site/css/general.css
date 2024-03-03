@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "font_bold";
+    src: url('../fonts/IBMPlexSansArabic-Bold.ttf');
+}
+
+
+
+@font-face {
+    font-family: "font_medium";
+    src: url('../fonts/IBMPlexSansArabic-Medium.ttf');
+}
+
+
+
+@font-face {
+    font-family: "font_regular";
+    src: url('../fonts/IBMPlexSansArabic-Regular.ttf');
+}
+
+
+
+
+
+:root {
+    --color-white: #fff;
+    --color-black: #121212;
+    --color-Primary1: #B28516;
+    --color-Primary2: #178DAB;
+    --color-Primary3: #168e97;
+    --color-border: #d9d9d9;
+    --color-text: #7e878d;
+}
+
+* {
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+li {
+    display: block;
+}
+
+.pg-section {
+    padding: 90px 0;
+}
+
+html {
+    --scrollbarBG: #a9b4fa38;
+    --thumbBG: #2f42c0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+button:focus,
+a {
+    outline: none;
+}
+
+a {
+    color: #3B3B3B;
+    text-decoration: none !important;
+    font-family: "font_medium";
+
+}
+
+ul {
+    margin: auto;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+button {
+    font-family: "font_medium";
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "font_bold";
+}
+
+h2 {
+    font-size: 18px;
+    font-family: "font_medium";
+
+    margin: 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 0;
+    font-family: "font_medium";
+
+}
+
+h4 {
+    font-size: 15px;
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 35px;
+    color: #414141;
+}
+
+a,
+button,
+img,
+.form-control {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+::selection {
+    color: #fff !important;
+    background-color: #096477 !important;
+}
+
+body {
+    text-align: right;
+    direction: rtl;
+    background: #fff;
+    font-family: "font_medium";
+    font-weight: 400;
+    padding: 0;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    color: #232323;
+    overflow-x: hidden;
+
+}
+
+.main-container {
+    width: 90%;
+    margin: auto;
+}
+
+
+.p-r {
+    margin-right: 20px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap-5 {
+    gap: 50px;
+}
+
+.mr-section {
+    margin-top: 90px ;
+    margin-bottom: 90px;
+}
+
+.bg-section {
+    padding: 50px 0;
+}
+
+.p-t{
+    padding: 30px 0;
+}
+
+.item {
+    margin: 9px;
+} 
+
+
+.color{
+    color: #168e97 !important;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 35px;
+    color: #414141;
+}
