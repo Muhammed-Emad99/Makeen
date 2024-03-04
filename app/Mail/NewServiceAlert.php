@@ -12,17 +12,17 @@ class NewServiceAlert extends Mailable
     use Queueable, SerializesModels;
 
     public $service;
-    public $message;
+    public $data;
 
-    public function __construct(Service $service, $message)
+    public function __construct(Service $service, $data)
     {
         $this->service = $service;
-        $this->message = $message;
+        $this->data = $data;
     }
 
     public function build()
     {
         return $this->markdown('mail.new-service-alert')
-            ->with(['message' => $this->message, 'service' => $this->service]);
+            ->with(['data' => $this->data, 'service' => $this->service]);
     }
 }

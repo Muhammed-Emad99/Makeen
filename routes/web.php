@@ -72,7 +72,7 @@ Route::name('site.')->namespace('Site')->middleware('lang')->group(function () {
     Route::get('/lang/{lang}', 'HomeController@lang')->name('lang');
 
     Route::controller('HomeController')->prefix('/site')->group(function () {
-
+        Route::get('/service/{service}', 'show')->name('service.show');
         Route::post('/order/service', 'orderService')->name('orderService');
         Route::post('contact/send', 'sendContact')->name('contact');
         Route::post('/subscribe', 'subscribe')->name('subscribe');

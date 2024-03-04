@@ -51,12 +51,11 @@ class ServiceController extends Controller
 
         $result = $this->serviceRepository->create($data);
 
-        // Dispatch the job
-        $serviceName = $result->name_enء; // Assuming the service has a 'name' field
-        NewServiceNotification::dispatch($serviceName);
+        dispatch(new NewServiceNotification($result));
+
 
         if ($result) {
-            return redirect()->route('admin.services.index')->with('success', 'تم اضافة الصوره بنجاح');
+            return redirect()->route('admin.services.index')->with('success', 'تم اضافة الاضافة بنجاح');
         } else {
             return redirect()->route('admin.services.index')->with('error', 'حدث خطأ ما');
         }

@@ -11,6 +11,7 @@ use App\Models\Contact;
 use App\Models\Feature;
 use App\Models\Order;
 use App\Models\Partner;
+use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Subscribe;
@@ -40,13 +41,6 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Language changed successfully');
     }
 
-//    public function mailList(MailListRequest $request, MailListRepositoryInterface $mailListRepository)
-//    {
-//        $mailListRepository->create($request->all());
-//        Session::flash('success', 'تم الاشتراك بنجاح');
-//        return redirect()->back();
-//    }
-
     public function orderService(OrderRequest $request)
     {
         $order = Order::create($request->all());
@@ -64,5 +58,12 @@ class HomeController extends Controller
     {
         Contact::create($request->all());
         return response()->json(['success' => 'تم ارسال الرسالة بنجاح وسوف يتم الرد عليك في اقرب وقت']);
+    }
+
+    public function show($id)
+    {
+        $categories = Category::all();
+        $service = Service::find($id);
+        return view('site.services.show', compact('categories','service'));
     }
 }

@@ -183,7 +183,7 @@
                                                         </div>
                                                         <div class="text-content">
                                                             <h2> {{ $service->name }} </h2>
-                                                            <p>{{ $service->description }}</p>
+                                                            <p>{!! $service->description !!}</p>
 
                                                         </div>
                                                         <a href="" data-toggle="modal"

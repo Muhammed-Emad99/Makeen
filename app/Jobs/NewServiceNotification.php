@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Models\Service;
 use App\Models\Subscribe; // Assume this is your User model
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -17,18 +18,24 @@ class NewServiceNotification implements ShouldQueue
 
     protected $service;
 
-    public function __construct($service)
+    public function __construct(Service $service)
     {
         $this->service = $service;
     }
 
     public function handle()
     {
+
+
         $subscribes = Subscribe::all(); // Assuming you have an 'is_subscribed' column
-        $message = 'مرحبا، لدينا خدمات جديدة اسم:' . $this->service->name_ar . '   ' .  'تحقق منها!';
+        $data = [
+            'message' => 'مرحبا، لدينا خدمات جديدة اسم:' . $this->service->name_en . '   ' .  'تحقق منها!',
+            'link' => url('site/service/' . $this->service->id),
+        ];
+        $newServiceAlert = new NewServiceAlert($this->service, $data);
 
         foreach ($subscribes as $subscribe) {
-            Mail::to($subscribe->email)->send(new NewServiceAlert($message));
+            Mail::to($subscribe->email)->send($newServiceAlert);
         }
     }
 }
